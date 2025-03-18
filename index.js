@@ -12,6 +12,9 @@ const cors = require('cors');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended : false })) 
+
+// cors policy for connecting backend to frontend
+
 app.use(cors({
   origin: 'http://localhost:5173', // Frontend URL (Vite Default Port)
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
